@@ -1,0 +1,501 @@
+<html><head>
+    <title>Welcome to Kickstars</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jquery.sidr.light.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/md-slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="css/ie7.css"/>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie8.css"/>
+    <![endif]-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/raphael-min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchwipe.min.js"></script>
+	<script type="text/javascript" src="js/md_slider.min.js"></script>
+	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tweet.min.js"></script>
+    <script type="text/javascript" src="js/pie.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    
+    <script type="text/javascript" src="js/underscore-1.8.3.js"></script>
+    <script type="text/javascript" src="js/backbone.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <div class="container_12 clearfix">
+            <div class="grid_12 header-content">
+                <div id="sys_header_right" class="header-right">
+                    <div id="header_offline" class="account-panel">
+                        <a href="#" class="btn btn-red sys_show_popup_login">Register</a>
+                        <a href="#" class="btn btn-black sys_show_popup_login">Login</a>
+                    </div>
+                    <div id="header_online" class="account-panel" style="display: none;">
+                        <a id="profile_button" href="#" class="btn btn-black" onclick="gotoProfile();">Profile</a>
+                        <a href="#" class="btn btn-red" onclick="logout();">Logout</a>
+                    </div>
+                    <div class="form-search">
+                        <form action="#">
+                            <label for="sys_txt_keyword">
+                                <input id="sys_txt_keyword" class="txt-keyword" type="text" placeholder="Search projects">
+                            </label>
+                            <button class="btn-search" type="reset"><i class="icon iMagnifier"></i></button>
+                            <button class="btn-reset-keyword" type="reset"><i class="icon iXHover"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-left">
+                    <h1 id="logo">
+                        <a href="index.html"><img src="images/logo1.png" alt="Cinque Terre"></a>
+                    </h1>
+                    <div class="main-nav clearfix">
+                        <p>
+</p><div class="nav-item">
+                            <a href="all-projects.html" class="nav-title">Discover</a>
+                            <p class="rs nav-description">Great Idea</p>
+                        </div>
+                        <span class="sep"></span>
+                        <div class="nav-item">
+                            <a href="new-project.html" class="nav-title">Start</a>
+                            <p class="rs nav-description">Your Idea</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!--end: #header -->
+    <div id="home-slider">
+        <div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2 md-touchdevice" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-wrap md-slide-responsive md-slide-fullwidth md-slide-bullet-2" style="height: 365px;"><div class="md-item-wrap"><div class="md-slide-items md-slider" id="md-slider-1" data-thumb-width="105" data-thumb-height="70">
+			<div class="md-slide-item slide-0" data-timeout="6000" style="left: 0px; top: 0px; opacity: 0; height: 365px; display: none;">
+				<div class="md-mainimg"><img src="images/ex/th-slide0.png" alt="" style="width: auto; height: 100%; left: -300.677px; top: 0px;"></div>
+				<div class="md-objects" style="width: 980px; font-size: 99%;">
+					<div class="md-object rs slide-title keep" data-x="20" data-y="38" data-width="480" data-height="30" data-start="700" data-stop="5500" data-easein="random" data-easeout="keep" style="width: 70.9796%; height: 8.21918%; top: 30.411%; left: 2.04082%;">
+						<p>Find your coach</p>
+					</div>
+					<div class="md-object rs slide-description keep" data-x="20" data-y="160" data-width="480" data-height="90" data-start="1400" data-stop="7500" data-easein="random" data-easeout="keep" style="width: 48.9796%; height: 24.6575%; top: 43.8356%; left: 2.04082%; display: block;">
+						
+					</div>
+					<div class="md-object rs keep" data-x="20" data-y="260" data-width="120" data-height="23" data-padding-top="9" data-padding-bottom="7" data-padding-left="10" data-padding-right="10" data-start="1800" data-stop="7500" data-easein="random" data-easeout="keep" style="width: 12.2449%; height: 6.30137%; top: 71.2329%; left: 2.04082%; display: block;">
+						<a href="#" class="btn btn-gray" style="padding: 9px 10px 7px;">Learn more</a>
+					</div>
+					<div class="md-object keep" data-x="495" data-y="0" data-width="612" data-height="365" data-start="1800" data-stop="7500" data-easein="fadeInRight" data-easeout="keep" style="width: 62.449%; height: 100%; top: 0%; left: 50.5102%; display: block;"><img src="images/ex/th-slide-man.png" alt="Search Money for Your Creative Ideas"></div>
+				</div>
+			</div>
+			<div class="md-slide-item slide-1" data-timeout="6000" style="height: 365px; left: 0px; top: 0px; opacity: 1; display: block;">
+				<div class="md-mainimg"><img src="images/ex/th-slide1.jpg" alt="" style="width: auto; height: 100%; left: -300.677px; top: 0px;"></div>
+				<div class="md-objects" style="width: 980px; font-size: 99%;">
+					<div class="md-object rs slide-title bounceInUp" data-x="20" data-y="188" data-width="390" data-height="30" data-start="700" data-stop="5500" data-easein="random" data-easeout="random" style="width: 39.7959%; height: 8.21918%; top: 51.5068%; left: 2.04082%; display: block;">
+						<p>Help others to achieve their dreamed Ideas</p>
+					</div>
+					
+					<div class="md-object fadeInLeftBig" data-x="454" data-y="44" data-width="327" data-height="268" data-start="1000" data-stop="5500" data-easein="random" data-easeout="random" style="width: 33.3673%; height: 73.4247%; top: 12.0548%; left: 46.3265%; display: block;"><img src="images/ex/slide1_1.png" alt="Responsive" width="327" height="268"></div>
+					<div class="md-object bounceInDown" data-x="628" data-y="142" data-width="298" data-height="176" data-start="1600" data-stop="5100" data-easein="random" data-easeout="random" style="width: 30.4082%; height: 48.2192%; top: 38.9041%; left: 64.0816%; display: block;"><img src="images/ex/slide1_2.png" alt="Responsive" width="298" height="176"></div>
+					<div class="md-object rotateInUpLeft" data-x="837" data-y="169" data-width="119" data-height="149" data-start="2200" data-stop="4800" data-easein="random" data-easeout="random" style="width: 12.1429%; height: 40.8219%; top: 46.3014%; left: 85.4082%; display: block;"><img src="images/ex/slide1_3.png" alt="Responsive" width="119" height="149"></div>
+					<div class="md-object bounceInUp" data-x="809" data-y="208" data-width="59" data-height="114" data-start="2800" data-stop="4500" data-easein="random" data-easeout="random" style="width: 6.02041%; height: 31.2329%; top: 56.9863%; left: 82.551%; display: block;"><img src="images/ex/slide1_4.png" alt="Responsive" width="59" height="114"></div>
+				</div>
+			</div>
+			<div class="md-slide-item slide-2" data-timeout="4000" style="height: 365px; left: 0px; top: 0px; opacity: 0; display: none;">
+				<div class="md-mainimg"><img src="images/ex/th-slide2.jpg" alt="" style="width: auto; height: 100%; left: -300.677px; top: 0px;"></div>
+				<div class="md-objects" style="width: 980px; font-size: 99%;">
+					<div class="md-object slide-with-background keep" data-x="20" data-y="58" data-width="500" data-height="170" data-padding-top="30" data-padding-bottom="30" data-padding-left="35" data-padding-right="35" data-start="300" data-stop="3600" data-easein="random" data-easeout="keep" style="width: 51.0204%; height: 46.5753%; top: 15.8904%; left: 2.04082%; padding: 30px 35px; display: block;">
+						<p>
+</p><h2 class="rs slide-title">Make your Idea real</h2>
+<p></p><p>
+  </p>
+<h2>Dont't get bored! In here, you will find who support you ideas</h2>
+						
+					</div>
+				</div>
+			</div>
+		</div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet md-current" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0.0411227;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0.181288;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet md-current" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet md-current" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet md-current" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity:0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet md-current" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity:0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet md-current" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0.069629;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet md-current" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet md-current" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet md-current" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet md-current" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet" rel="0"><a></a></div><div class="md-bullet md-current" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div><div class="md-arrow" style="opacity: 0;"><div class="md-arrow-left"><span></span></div><div class="md-arrow-right"><span></span></div></div></div><div class="md-bullets" style="left: 153.5px; right: 153.5px;"><div class="md-bullet md-current" rel="0"><a></a></div><div class="md-bullet" rel="1"><a></a></div><div class="md-bullet" rel="2"><a></a></div></div></div>
+    </div><!--end: #home-slider -->
+    <div class="home-feature-category">
+        <div class="container_12 clearfix">
+            <div class="grid_4 left-lst-category">
+                <div class="wrap-lst-category">
+                    <h3 class="title-welcome rs">Welcome to Pronnector</h3>
+                    <p class="description rs">Where you can make your Idea real.</p>
+                    <nav class="lst-category">
+                        <ul class="rs nav nav-category">
+                            <li>
+                                <a href="#">
+                                    Architecture
+                                    <span class="count-val">(12)</span>
+                                    <i class="icon iPlugGray"></i>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#">
+                                    Shoes
+                                    <span class="count-val">(12)</span>
+                                    <i class="icon iPlugGray"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Furniture
+                                    <span class="count-val">(12)</span>
+                                    <i class="icon iPlugGray"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+
+                                    Entertainment
+                                    <span class="count-val">(12)</span>
+                                    <i class="icon iPlugGray"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    T-shirt
+                                    <span class="count-val">(12)</span>
+                                    <i class="icon iPlugGray"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="rs view-all-category">
+                            <a href="category.html" class="be-fc-orange">+ View all categories</a>
+                        </p>
+                    </nav><!--end: .lst-category -->
+                </div>
+            </div><!--end: .left-lst-category -->
+            <div class="grid_8 marked-category">
+                <div class="wrap-title clearfix">
+                    <h2 class="title-mark rs">Staff Picks: <span class="fc-orange">Shoes</span></h2>
+                    <a href="category.html" class="count-project be-fc-orange">See all <span class="fw-b">24</span> Comics projects</a>
+                </div>
+                <div class="box-marked-project project-short">
+                    <div class="top-project-info">
+                        <div class="content-info-short clearfix">
+                            <a href="#" class="thumb-img">
+                                <img src="images/ex/th-292x204-1.jpg" alt="$TITLE">
+                            </a>
+                            <div class="wrap-short-detail">
+                                <h3 class="rs acticle-title"><a class="be-fc-orange" href="project.html">RADICALLY UNIQUE FOOTWEAR: The Coolest Pair You'll Ever Wear</a></h3>
+                                <p class="rs tiny-desc">by <a href="profile.html" class="fw-b fc-gray be-fc-orange">Diaa Nofal</a> in <span class="fw-b fc-gray">New York, NY</span></p>
+                                <p class="rs title-description">Designed for those who aren't afraid to stand out in a crowd, INKKAS are the perfect mix of comfort, durability &amp; eye-catching style.
+</p>
+                            </div>
+                            <p class="rs clearfix comment-view">
+                                <a href="#" class="fc-gray be-fc-orange">75 comments</a>
+                                <span class="sep">|</span>
+                                <a href="#" class="fc-gray be-fc-orange">378 views</a>
+                            </p>
+                        </div>
+                    </div><!--end: .top-project-info -->
+                    
+                </div>
+            </div><!--end: .marked-category -->
+            <div class="clear"></div>
+        </div>
+    </div><!--end: .home-feature-category -->
+    <div class="home-popular-project">
+        <div class="container_12">
+            <div class="grid_12 wrap-title">
+                <h2 class="common-title">Popular</h2>
+                <a class="be-fc-orange" href="all-projects.html">View all</a>
+            </div>
+            <div class="clear"></div>
+            <div class="lst-popular-project clearfix">
+                <div class="grid_3">
+                    <div class="project-short sml-thumb">
+                        <div class="top-project-info">
+                            <div class="content-info-short clearfix">
+                                <a href="#" class="thumb-img">
+                                    <img src="images/ex/th-292x204-1.jpg" alt="$TITLE">
+                                </a>
+                                <div class="wrap-short-detail">
+                                    <h3 class="rs acticle-title"><a class="be-fc-orange" href="project.html">
+RADICALLY UNIQUE FOOTWEAR</a></h3>
+                                    <p class="rs tiny-desc">by <a href="profile.html" class="fw-b fc-gray be-fc-orange">Diaa Nofal</a></p>
+                                    <p class="rs title-description">Designed for those who aren't afraid to stand out in a crowd, INKKAS are the perfect mix of comfort, durability &amp;.
+</p>
+                                    <p class="rs project-location">
+                                        <i class="icon iLocation"></i>
+                                        New York, NY
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-project-info clearfix">
+                            <div class="line-progress">
+                                <div class="bg-progress">
+                                    <span style="width: 50%"></span>
+                                </div>
+                            </div>
+                            <div class="group-fee clearfix">
+                                <div class="fee-item">
+                                    <p class="rs lbl">Funded</p>
+                                    <span class="val">50%</span>
+                                </div>
+                                <div class="sep"></div>
+                                <div class="fee-item">
+                                    <p class="rs lbl">Pledged</p>
+                                    <span class="val">$38,000</span>
+                                </div>
+                                <div class="sep"></div>
+                                <div class="fee-item">
+                                    <p class="rs lbl">Days Left</p>
+                                    <span class="val">25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end: .grid_3 > .project-short-->
+                <div class="grid_3">
+                    <div class="project-short sml-thumb">
+                        <div class="top-project-info">
+                            <div class="content-info-short clearfix">
+                                <a href="#" class="thumb-img">
+                                    <img src="images/ex/th-192x135-1.jpg" alt="$TITLE">
+                                </a>
+                                <div class="wrap-short-detail">
+                                    <h3 class="rs acticle-title"><a class="be-fc-orange" href="project.html">The Ultimate American Jacket:</a></h3>
+                                    <p class="rs tiny-desc">by <a href="profile.html" class="fw-b fc-gray be-fc-orange">Piero</a></p>
+                                    <p class="rs title-description">Your new cold weather essential: A winter jacket made entirely in the USA </p>
+                                    <p class="rs project-location">
+                                        <i class="icon iLocation"></i>
+                                        New York, NY
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-project-info clearfix">
+                            <div class="line-progress">
+                                <div class="bg-progress">
+                                    <span class="success" style="width: 98%"></span>
+                                </div>
+                            </div>
+                            <div class="group-fee clearfix">
+                                <div class="fee-item">
+                                    <p class="rs lbl">Funded</p>
+                                    <span class="val">98%</span>
+                                </div>
+                                <div class="sep"></div>
+                                <div class="fee-item">
+                                    <p class="rs lbl">Pledged</p>
+                                    <span class="val">$25,000</span>
+                                </div>
+                                <div class="sep"></div>
+                                <div class="fee-item">
+                                    <p class="rs lbl">Days Left</p>
+                                    <span class="val">18</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end: .grid_3 > .project-short-->
+                <div class="clear clear-2col"></div>
+                <div class="grid_3">
+                    <div class="project-short sml-thumb">
+                        <div class="top-project-info">
+                            <div class="content-info-short clearfix">
+                                <a href="#" class="thumb-img">
+                                    <img src="images/ex/th-192x135-2.jpg" alt="$TITLE">
+                                </a>
+                                <div class="wrap-short-detail">
+                                    <h3 class="rs acticle-title"><a class="be-fc-orange" href="project.html">Candy Cane Village</a></h3>
+                                    <p class="rs tiny-desc">by <a href="profile.html" class="fw-b fc-gray be-fc-orange">Inna Doko</a></p>
+                                    <p class="rs title-description">A fun and interactive place where children with physical, developmental and cognitive challenges can come and just be</p>
+                                    <p class="rs project-location">
+                                        <i class="icon iLocation"></i>
+                                        New York, NY
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-project-info clearfix">
+                            <div class="line-progress">
+                                <div class="bg-progress">
+                                    <span style="width: 21%"></span>
+                                </div>
+                            </div>
+                            <div class="group-fee clearfix">
+                                <div class="fee-item">
+                                    <p class="rs lbl">Funded</p>
+                                    <span class="val">21%</span>
+                                </div>
+                                <div class="sep"></div>
+                                <div class="fee-item">
+                                    <p class="rs lbl">Pledged</p>
+                                    <span class="val">$850K</span>
+                                </div>
+                                <div class="sep"></div>
+                                <div class="fee-item">
+                                    <p class="rs lbl">Days Left</p>
+                                    <span class="val">2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end: .grid_3 > .project-short-->
+            </div>
+        </div>
+    </div><!--end: .home-popular-project -->
+    <div class="home-discover-friends">
+        <div class="container_12">
+            <div class="row-friends">
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-1.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-2.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-3.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-4.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-5.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-6.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-7.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-8.jpg" alt="$USER_NAME"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="row-friends row-connect-fb">
+                <a class="thumb-avatar t-first" href="#"><img src="images/ex/th-119x119-17.jpg" alt="$USER_NAME"></a>
+                <div class="connect-fb">
+                    <p class="rs description">Discover great projects with your friends!</p>
+                    <a href="#" class="btn btn-fb">Connect With Facebook</a>
+                </div>
+                <a class="thumb-avatar t-last" href="#"><img src="images/ex/th-119x119-1.jpg" alt="$USER_NAME"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="row-friends">
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-9.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-10.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-11.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-12.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-13.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-14.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-15.jpg" alt="$USER_NAME"></a>
+                <a class="thumb-avatar" href="#"><img src="images/ex/th-119x119-16.jpg" alt="$USER_NAME"></a>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div><!--end: .home-discover-friends -->
+
+    <!--end: .additional-info-line -->
+    <footer id="footer">
+        <div class="container_12 main-footer">
+            <div class="grid_3 about-us">
+                <h3 class="rs title">About T2Team</h3>
+                
+                <p class="rs email"></p>
+                
+            </div><!--end: .contact-info -->
+            <!--end: .recent-tweets -->
+            <div class="clear clear-2col"></div>
+            <!--end: .email-newsletter -->
+            
+            <div class="clear"></div>
+        </div>
+        
+    </footer><!--end: #footer -->
+
+</div>
+<!-- LOGIN -->
+<div class="popup-common" id="sys_popup_common">
+    <div class="overlay-bl-bg"></div>
+    <div class="container_12 pop-content">
+        <div class="grid_12 wrap-btn-close ta-r">
+            <i class="icon iBigX closePopup"></i>
+        </div>
+        <div class="grid_6 prefix_1">
+            <div class="form login-form">
+                <form action="javascript:registerUser();">
+                    <h3 class="rs title-form">Register</h3>
+                    <div class="box-white">
+                        <h4 class="rs title-box">New to Pronnector?</h4>
+                        <p class="rs">A Pronnector account is required to continue.</p>
+                        <div class="form-action">
+                            <label for="txt_name">
+                                <input id="user_full_name" class="txt fill-width" type="text" placeholder="Enter full name">
+                            </label>
+                            <div class="wrap-2col clearfix">
+                                <div class="col">
+                                    <label for="txt_email">
+                                        <input id="user_email" class="txt fill-width" type="email" placeholder="Enter your e-mail address">
+                                    </label>
+                                    <label for="txt_re_email">
+                                        <input id="user_re_email" class="txt fill-width" type="email" placeholder="Re-enter your e-mail adress">
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <label for="txt_password">
+                                        <input id="user_password" class="txt fill-width" type="password" placeholder="Enter password">
+                                    </label>
+                                    <label for="txt_re_password">
+                                        <input id="user_re_password" class="txt fill-width" type="password" placeholder="Re-enter password">
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="rs pb10">By signing up, you agree to our <a href="#" class="fc-orange">terms of use</a> and <a href="#" class="fc-orange">privacy policy</a>.</p>
+                            <p class="rs ta-c">
+                                <button class="btn btn-red btn-submit">Register</button>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="grid_4">
+            <div class="form login-form">
+                <form action="javascript:login();">
+                    <h3 class="rs title-form">Login</h3>
+                    <div class="box-white">
+                        <h4 class="rs title-box">Already Have an Account?</h4>
+                        <p class="rs">Please log in to continue.</p>
+                        <div class="form-action">
+                            <label for="txt_email_login">
+                                <input id="user_email_login" class="txt fill-width" type="email" placeholder="Enter your e-mail address">
+                            </label>
+                            <label for="txt_password_login">
+                                <input id="user_password_login" class="txt fill-width" type="password" placeholder="Enter password">
+                            </label>
+
+                            <label for="chk_remember" class="rs pb20 clearfix">
+                                <input id="chk_remember" type="checkbox" class="chk-remember">
+                                <span class="lbl-remember">Remember me</span>
+                            </label>
+                            <p class="rs ta-c pb10">
+                                <button class="btn btn-red btn-submit">Login</button>
+                            </p>
+                            <p class="rs ta-c">
+                                <a href="#" class="fc-orange">I forgot my password</a>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--end: LOGIN -->
+
+<div id="alternate-menu" class="sidr left">
+    <div class="sidr-inner">
+        <ul class="sidr-class-alternate-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="all-pages.html">All Pages</a></li>
+            <li><a href="how-it-work.html">Help</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+</div>
+    
+    <script type="application/javascript" src="js/jquery.session.js"></script>
+    <script type="application/javascript" src="js/auth.js"></script>
+    <script type="application/javascript">
+        checkIfUserIsOnline();
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "creatorName": "Piero Divasto",
+        "creatorID": 1,
+        "name": "Radically Unique Footwear",
+        "description": "Designed for those who aren't afraid to stand out in a crowd, INKKAS are the perfect mix of comfort, durability.",
+        "startDate": "09/11/2015",
+        "dueDate": "08/12/2015",
+        "pledgeGoal": "38000",
+        "pledgeCurrent": "10000",
+        "location": "American Samoa, AS",
+        "image": "images/ex/th-292x204-1.jpg",
+        "url": "project.html?projectID=1"
+    },
+    {
+        "id": 2,
+        "creatorName": "Piero Divasto",
+        "creatorID": 1,
+        "name": "The ultimate american jacket",
+        "description": "Your new cold weather essential: A winter jacket made entirely in the USA.",
+        "startDate": "09/11/2015",
+        "dueDate": "08/12/2015",
+        "pledgeGoal": "25000",
+        "pledgeCurrent": "5000",
+        "location": "American Samoa, AS",
+        "image": "images/ex/th-192x135-1.jpg",
+        "url": "project.html?projectID=2"
+    },
+    {
+        "id": 3,
+        "creatorName": "Louisa Reiss",
+        "creatorID": 2,
+        "name": "Candy cane village",
+        "description": "A fun and interactive place where children with physical, developmental and cognitive challenges can come and just be.",
+        "startDate": "09/11/2015",
+        "dueDate": "08/12/2015",
+        "pledgeGoal": "85000",
+        "pledgeCurrent": "80000",
+        "location": "American Samoa, AS",
+        "image": "images/ex/th-192x135-2.jpg",
+        "url": "project.html?projectID=3"
+    }
+]

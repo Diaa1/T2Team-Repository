@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "fullName": "Piero Divasto",
+        "email": "pdivasto@gmail.com",
+        "password": "123456",
+        "location": "Chile, CL",
+        "bio": "Student M.Sc. in Business Informatics, Mannheim University",
+        "profileURL": "pierodivasto",
+        "personalURL": "http://www.pdivasto.cf",
+        "image": "images/ex/pdivasto_avatar.jpg",
+        "url": "profile.html?userID=1"
+    },
+    {
+        "id": 2,
+        "fullName": "Louisa Reiss",
+        "email": "lreiss@gmail.com",
+        "password": "123",
+        "location": "Germany, DE",
+        "bio": "Student M.Sc. in Business Informatics, Mannheim University",
+        "profileURL": "Louisa Reiss",
+        "personalURL": "",
+        "image": "images/no-avatar.png",
+        "url": "profile.html?userID=2"
+    }
+]

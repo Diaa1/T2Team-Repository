@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Category | Kickstars</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/jquery.sidr.light.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" href="css/ie7.css"/>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie8.css"/>
+    <![endif]-->
+    <link rel="stylesheet" href="css/responsive.css"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tweet.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Pronnector -->
+    <script type="text/javascript" src="js/underscore-1.8.3.js"></script>
+    <script type="text/javascript" src="js/backbone.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <div class="container_12 clearfix">
+            <div class="grid_12 header-content">
+                <div id="sys_header_right" class="header-right">
+                    <div id="header_offline" class="account-panel">
+                        <a href="#" class="btn btn-red sys_show_popup_login">Register</a>
+                        <a href="#" class="btn btn-black sys_show_popup_login">Login</a>
+                    </div>
+                    <div id="header_online" class="account-panel" style="display: none;">
+                        <a id="profile_button" href="#" class="btn btn-black" onclick="gotoProfile();">Profile</a>
+                        <a href="#" class="btn btn-red" onclick="logout();">Logout</a>
+                    </div>
+                    <div class="form-search">
+                        <form action="#">
+                            <label for="sys_txt_keyword">
+                                <input id="sys_txt_keyword" class="txt-keyword" type="text" placeholder="Search projects"/>
+                            </label>
+                            <button class="btn-search" type="reset"><i class="icon iMagnifier"></i></button>
+                            <button class="btn-reset-keyword" type="reset"><i class="icon iXHover"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-left">
+                    <h1 id="logo">
+                        <a href="index.html"><img src="images/logo1.png" alt="$SITE_NAME"/></a>
+                    </h1>
+                    <div class="main-nav clearfix">
+                        <div class="nav-item">
+                            <a href="#" class="nav-title">Discover</a>
+                            <p class="rs nav-description">Great Projects</p>
+                        </div>
+                        <span class="sep"></span>
+                        <div class="nav-item">
+                            <a href="new-project.html" class="nav-title">Start</a>
+                            <p class="rs nav-description">Your Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header><!--end: #header -->
+
+    <div class="layout-2cols">
+        <div class="content grid_9">
+            <div class="search-result-page">
+                <div class="top-lbl-val">
+                    <h3 class="common-title">Discover / <span class="fc-orange">All Projects</span></h3>
+                    <div class="count-result">
+                        <span class="fw-b fc-black">560</span> projects found
+                    </div>
+                </div>
+                <div class="list-project-in-category">
+                    <div class="lbl-type clearfix">
+                        <h4 class="rs title-lbl"><a href="#" class="be-fc-orange">All Projects</a></h4>
+                        <a href="#" class="view-all be-fc-orange">View all</a>
+                    </div>
+                    <!-- PROJECT LIST-->
+                    <div id="list-all-projects" class="list-project">
+                                                
+                    </div>
+                    <!--end: PROJECT LIST-->
+                </div><!--end: .list-project-in-category -->
+                <p class="rs ta-c">
+                    <a id="showmoreproject" class="btn btn-black btn-load-more" href="#" onclick="writeProjects();">Show more projects</a>
+                </p>
+            </div><!--end: .search-result-page -->
+        </div><!--end: .content -->
+        <div class="sidebar grid_3">
+            <div class="left-list-category">
+                <h4 class="rs title-nav">Featured</h4>
+                <ul class="rs nav nav-category">
+                    <li class="active">
+                        <a href="#">
+                            All Projects
+                            <span class="count-val">(12)</span>
+                            <i class="icon iPlugGray"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Popular
+                            <span class="count-val">(0)</span>
+                            <i class="icon iPlugGray"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Now Launched
+                            <span class="count-val">(0)</span>
+                            <i class="icon iPlugGray"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Ending Soon
+                            <span class="count-val">(0)</span>
+                            <i class="icon iPlugGray"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Small Project
+                            <span class="count-val">(0)</span>
+                            <i class="icon iPlugGray"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Most Funded
+                            <span class="count-val">(0)</span>
+                            <i class="icon iPlugGray"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Curated Pages
+                            <span class="count-val">(0)</span>
+                            <i class="icon iPlugGray"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div><!--end: .left-list-category -->
+        </div><!--end: .sidebar -->
+        <div class="clear"></div>
+    </div>
+    <footer id="footer">
+        <div class="container_12 main-footer">
+            <div class="grid_3 about-us">
+                <h3 class="rs title">About T2Team</h3>
+                
+                <p class="rs email"></p>
+                
+            </div><!--end: .contact-info -->
+            <!--end: .recent-tweets -->
+            <div class="clear clear-2col"></div>
+            <!--end: .email-newsletter -->
+            
+            <div class="clear"></div>
+        </div>
+        
+    </footer><!--end: #footer -->
+
+</div>
+
+<!-- LOGIN -->
+<div class="popup-common" id="sys_popup_common">
+    <div class="overlay-bl-bg"></div>
+    <div class="container_12 pop-content">
+        <div class="grid_12 wrap-btn-close ta-r">
+            <i class="icon iBigX closePopup"></i>
+        </div>
+        <div class="grid_6 prefix_1">
+            <div class="form login-form">
+                <form action="javascript:registerUser();">
+                    <h3 class="rs title-form">Register</h3>
+                    <div class="box-white">
+                        <h4 class="rs title-box">New to Pronnector?</h4>
+                        <p class="rs">A Pronnector account is required to continue.</p>
+                        <div class="form-action">
+                            <label for="txt_name">
+                                <input id="user_full_name" class="txt fill-width" type="text" placeholder="Enter full name">
+                            </label>
+                            <div class="wrap-2col clearfix">
+                                <div class="col">
+                                    <label for="txt_email">
+                                        <input id="user_email" class="txt fill-width" type="email" placeholder="Enter your e-mail address">
+                                    </label>
+                                    <label for="txt_re_email">
+                                        <input id="user_re_email" class="txt fill-width" type="email" placeholder="Re-enter your e-mail adress">
+                                    </label>
+                                </div>
+                                <div class="col">
+                                    <label for="txt_password">
+                                        <input id="user_password" class="txt fill-width" type="password" placeholder="Enter password">
+                                    </label>
+                                    <label for="txt_re_password">
+                                        <input id="user_re_password" class="txt fill-width" type="password" placeholder="Re-enter password">
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="rs pb10">By signing up, you agree to our <a href="#" class="fc-orange">terms of use</a> and <a href="#" class="fc-orange">privacy policy</a>.</p>
+                            <p class="rs ta-c">
+                                <button class="btn btn-red btn-submit">Register</button>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="grid_4">
+            <div class="form login-form">
+                <form action="javascript:login();">
+                    <h3 class="rs title-form">Login</h3>
+                    <div class="box-white">
+                        <h4 class="rs title-box">Already Have an Account?</h4>
+                        <p class="rs">Please log in to continue.</p>
+                        <div class="form-action">
+                            <label for="txt_email_login">
+                                <input id="user_email_login" class="txt fill-width" type="email" placeholder="Enter your e-mail address">
+                            </label>
+                            <label for="txt_password_login">
+                                <input id="user_password_login" class="txt fill-width" type="password" placeholder="Enter password">
+                            </label>
+
+                            <label for="chk_remember" class="rs pb20 clearfix">
+                                <input id="chk_remember" type="checkbox" class="chk-remember">
+                                <span class="lbl-remember">Remember me</span>
+                            </label>
+                            <p class="rs ta-c pb10">
+                                <button class="btn btn-red btn-submit">Login</button>
+                            </p>
+                            <p class="rs ta-c">
+                                <a href="#" class="fc-orange">I forgot my password</a>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--end: LOGIN -->
+    <script type="application/javascript" src="js/jquery.session.js"></script>
+    <script type="application/javascript" src="js/auth.js"></script>
+    <script type="application/javascript">
+        checkIfUserIsOnline();
+        function writeProjects(){
+            initProjects();
+            var aux = 2;
+            projectCollection.each(function(model, index, list){
+                writeProjectHTML(list[index]);
+                if((index % aux) == 0 && index != 0){
+                    console.log(aux)
+                    $("#list-all-projects").append($("<div>").addClass("clear"));
+                    aux = aux + 3;
+                }
+            });
+        }
+        function writeProjectHTML(project){
+            var projectProgress = (100 * parseInt(project.get("pledgeCurrent"))) / (parseInt(project.get("pledgeGoal")));
+            $("#list-all-projects").append(
+                $("<div>").addClass("grid_3").append(
+                    $("<div>").addClass("project-short sml-thumb").append(
+                        $("<div>").addClass("top-project-info").append(
+                            $("<div>").addClass("content-info-short clearfix").append(
+                                $("<a>").attr({href: project.get("url")}).addClass("thumb-img").append(
+                                    $("<img>").attr({src: project.get("image"), alt: "$TITLE"})      
+                                )
+                            ).append(
+                                $("<div>").addClass("wrap-short-detail").append(
+                                    $("<h3>").addClass("rs acticle-title").append(
+                                        $("<a>").addClass("be-fc-orange").attr({href: project.get("url")}).html(project.get("name"))
+                                    )
+                                ).append(
+                                    $("<p>").addClass("rs tiny-desc").append(
+                                        $("<a>").addClass("fw-b fc-gray be-fc-orange").attr({href: "#"}).html(project.get("creatorName"))
+                                    ).prepend("by ")
+                                ).append(
+                                    $("<p>").addClass("rs title-description").append(
+                                        project.get("description")
+                                    )
+                                ).append(
+                                    $("<p>").addClass("rs project-location").append(
+                                        $("<i>").addClass("icon iLocation")
+                                    ).append(
+                                        project.get("location")
+                                    )
+                                )
+                            )
+                        )
+                    ).append(
+                        $("<div>").addClass("bottom-project-info clearfix").append(
+                            $("<div>").addClass("line-progress").append(
+                                $("<div>").addClass("bg-progress").append(
+                                    $("<span>").css("width",String(projectProgress)+"%")
+                                )
+                            )
+                        ).append(
+                            $("<div>").addClass("group-fee clearfix").append(
+                                $("<div>").addClass("fee-item").append(
+                                    $("<p>").addClass("rs lbl").append("Funded")
+                                ).append(
+                                    $("<span>").addClass("val").append(String(parseInt(projectProgress))+"%")
+                                )
+                            ).append(
+                                $("<div>").addClass("sep")
+                            ).append(
+                                $("<div>").addClass("fee-item").append(
+                                    $("<p>").addClass("rs lbl").append("Pledged")
+                                ).append(
+                                    $("<span>").addClass("val").append(project.get("pledgeCurrent"))
+                                )
+                            ).append(
+                                $("<div>").addClass("sep")
+                            ).append(
+                                $("<div>").addClass("fee-item").append(
+                                    $("<p>").addClass("rs lbl").append("Day Left")
+                                ).append(
+                                    $("<span>").addClass("val").append("60")
+                                )
+                            )
+                        )
+                    ).append(
+                        $("<div>").addClass("clear")
+                    )
+                )
+            );
+        }
+    </script>
+</body>
+</html>
